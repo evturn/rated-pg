@@ -8,21 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    // MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var mealNameLabel: UILabel!
+class ViewController: UIViewController, UITextFieldDelegate {
+  
+  // MARK: Properties
+  @IBOutlet weak var nameTextField: UITextField!
+  @IBOutlet weak var mealNameLabel: UILabel!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    // MARK: Actions
-    @IBAction func setDefaultLabelText(sender: UIButton) {
-        mealNameLabel.text = "Default Text"
-    }
-    
+    // Handle the text field's user input through delegate callbacks.
+    nameTextField.delegate = self
+  }
+  
+  // MARK: UITextFieldDelegate
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
 
+    // Hide the keyboard.
+    textField.resignFirstResponder()
+    return true
+  }
+  
+  // MARK: Actions
+  @IBAction func setDefaultLabelText(sender: UIButton) {
+    mealNameLabel.text = "Default Text"
+  }
+  
+  
 }
 

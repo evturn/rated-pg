@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		337B848A1C615B3200AC4FC9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337B84891C615B3200AC4FC9 /* RatingControl.swift */; };
 		33C8C64A1C5BF528002C427A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8C6491C5BF528002C427A /* AppDelegate.swift */; };
 		33C8C64C1C5BF528002C427A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8C64B1C5BF528002C427A /* ViewController.swift */; };
 		33C8C64F1C5BF528002C427A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C8C64D1C5BF528002C427A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		337B84891C615B3200AC4FC9 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		33C8C6461C5BF528002C427A /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C8C6491C5BF528002C427A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C8C64B1C5BF528002C427A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				33C8C6491C5BF528002C427A /* AppDelegate.swift */,
 				33C8C64B1C5BF528002C427A /* ViewController.swift */,
+				337B84891C615B3200AC4FC9 /* RatingControl.swift */,
 				33C8C64D1C5BF528002C427A /* Main.storyboard */,
 				33C8C6501C5BF528002C427A /* Assets.xcassets */,
 				33C8C6521C5BF528002C427A /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C8C64C1C5BF528002C427A /* ViewController.swift in Sources */,
+				337B848A1C615B3200AC4FC9 /* RatingControl.swift in Sources */,
 				33C8C64A1C5BF528002C427A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +392,7 @@
 				33C8C6651C5BF529002C427A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33C8C6661C5BF529002C427A /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +401,7 @@
 				33C8C6681C5BF529002C427A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

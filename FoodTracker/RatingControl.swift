@@ -12,14 +12,23 @@ class RatingControl: UIView {
   //  MARK: Properties
   var rating = 0
   var ratingButtons = [UIButton]()
+  var spacing = 5
+  var stars = 5
   
   //  MARK: Initialization
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
+    let filledStarImage = UIImage(named: "filledStar")
+    let emptyStarImage = UIImage(named: "emptyStar")
+    
     for _ in 0..<5 {
       let button = UIButton()
-      button.backgroundColor = UIColor.redColor()
+      
+      button.setImage(emptyStarImage, forState: .Normal)
+      button.setImage(filledStarImage, forState: .Selected)
+      button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
+  
       button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
       ratingButtons += [button]
       addSubview(button)

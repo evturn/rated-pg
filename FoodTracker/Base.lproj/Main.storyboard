@@ -42,6 +42,7 @@
                                     <outlet property="nameLabel" destination="GTt-D9-YIa" id="Nqc-AW-DG5"/>
                                     <outlet property="photoImageView" destination="8Ju-rA-fzg" id="6BI-41-ONT"/>
                                     <outlet property="ratingControl" destination="lmA-GP-iRy" id="WHL-Hj-5sa"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="i30-sB-Idv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -111,11 +112,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="Ohc-iM-Zna">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="czk-ev-hNN">
-                            <connections>
-                                <action selector="cancel:" destination="BYZ-38-t0r" id="sVF-ef-UrQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="czk-ev-hNN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="uRd-V9-POe">
                             <connections>
                                 <segue destination="G71-Vc-YtE" kind="unwind" unwindAction="unwindToMealList:" id="4F7-ho-SjE"/>
@@ -173,10 +170,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tq-2c-WId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="312"/>
+            <point key="canvasLocation" x="1512" y="703"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="150" height="150"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="i30-sB-Idv"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -50,7 +50,13 @@
                             <outlet property="delegate" destination="cpP-Aq-hOH" id="dce-UC-zc2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9r5-fY-a7L"/>
+                    <navigationItem key="navigationItem" title="Your Meals" id="9r5-fY-a7L">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wdS-7w-p5e">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="vdT-e8-MbQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvd-Mx-g0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

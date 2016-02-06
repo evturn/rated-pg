@@ -132,6 +132,8 @@ class MealTableViewController: UITableViewController {
         meals.append(meal)
         tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
       }
+      
+      saveMeals()
     }
   }
   

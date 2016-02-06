@@ -19,8 +19,12 @@ class MealTableViewController: UITableViewController {
     
     //  Use the edit button item provided by the table view controller.
     navigationItem.leftBarButtonItem = editButtonItem()
-    //  Load the sample data.
-    loadSampleMeals()
+    if let savedMeals = loadMeals() {
+      meals += savedMeals
+    } else {
+      //  Load the sample data.
+      loadSampleMeals()
+    }
   }
   
   func loadSampleMeals() {
@@ -74,6 +78,7 @@ class MealTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     if editingStyle == .Delete {
       // Delete the row from the data source
+      meals.removeAtIndex(indexPath.row)
       saveMeals()
       tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
     } else if editingStyle == .Insert {

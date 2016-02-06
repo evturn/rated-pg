@@ -26,10 +26,10 @@ class MealTableViewController: UITableViewController {
     let meal1 = Meal(name: "Cinder Block Salad", photo: photo1, rating: 4)!
     
     let photo2 = UIImage(named: "meal2")!
-    let meal2 = Meal(name: "The Beef Chicken", photo: photo2, rating: 5)!
+    let meal2 = Meal(name: "The Beef Chicken (Popular!)", photo: photo2, rating: 5)!
     
     let photo3 = UIImage(named: "meal3")!
-    let meal3 = Meal(name: "Spaghetti and shitballs", photo: photo3, rating: 3)!
+    let meal3 = Meal(name: "Spaghetti with Dinner Fork", photo: photo3, rating: 3)!
     
     meals += [meal1, meal2, meal3]
   }

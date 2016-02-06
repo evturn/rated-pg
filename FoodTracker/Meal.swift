@@ -10,12 +10,16 @@ import UIKit
 
 class Meal: NSObject, NSCoding {
  
-  //   MARK: Properties
+  //  MARK: Properties
   var name: String
   var photo: UIImage?
   var rating: Int
   
-  //   MARK: Initialization
+  //  MARK: Archiving Paths
+  static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentationDirectory, inDomains: .UserDomainMask).first!
+  static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("meals")
+  
+  //  MARK: Initialization
   init?(name: String, photo: UIImage?, rating: Int) {
     //  Initialize stored properties.
     self.name = name

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class Meal {
+class Meal: NSObject, NSCoding {
+ 
   //   MARK: Properties
   var name: String
   var photo: UIImage?
@@ -25,5 +26,19 @@ class Meal {
     if name.isEmpty || rating < 0 {
       return nil
     }
+  }
+  
+  //  MARK: Types
+  struct PropertyKey {
+    static let nameKey = "name"
+    static let photoKey = "photo"
+    static let ratingKey = "rating"
+  }
+  
+  //  MARK: NSCoding
+  func encodeWithCoder(aCoder: NSCoder) {
+    aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
+    aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
+    aCoder.encodeInteger(rating, forKey: PropertyKey.ratingKey)
   }
 }
